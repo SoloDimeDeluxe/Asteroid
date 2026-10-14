@@ -1,23 +1,13 @@
-#include "raylib.h"
+#include "game/game.h"
 
 namespace ReyesCuadra
 {
 	// main is declared extern "C" so it keeps its global name and the linker
-	// still finds it as the program entry point, even though it lives inside our namespace
+	// still finds it as the program entry point, even though it lives inside our namespace.
+	// It only starts the game: all the logic lives in game::Run().
 	extern "C" int main()
 	{
-		InitWindow(1024, 768, "Asteroids");
-		SetTargetFPS(60);
-
-		while (!WindowShouldClose())
-		{
-			BeginDrawing();
-			ClearBackground(BLACK);
-			DrawText("raylib integrada!", 400, 370, 20, RAYWHITE);
-			EndDrawing();
-		}
-
-		CloseWindow();
+		game::Run();
 		return 0;
 	}
 }
