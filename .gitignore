@@ -1,0 +1,43 @@
+# ---------------------------------------------
+# Visual Studio
+# ---------------------------------------------
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.VC.db
+*.VC.VC.opendb
+ipch/
+
+# ---------------------------------------------
+# Build output (generated when compiling)
+# ---------------------------------------------
+bin/
+obj/
+x64/
+Debug/
+Release/
+*.exe
+*.ilk
+*.pdb
+*.idb
+*.obj
+*.iobj
+*.ipdb
+*.tlog
+*.log
+*.lastbuildstate
+
+# ---------------------------------------------
+# Libraries: ignore stray .lib files but KEEP raylib
+# ---------------------------------------------
+*.lib
+!lib/raylib/lib/*.lib
+
+# ---------------------------------------------
+# OS
+# ---------------------------------------------
+Thumbs.db
+Desktop.ini
+.DS_Store
